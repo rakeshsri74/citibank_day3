@@ -1,0 +1,94 @@
+1. Introduction To JPA
+
+JPA, which stands for java persistence API, is a java specification for accessing,persisting, and managing data between java objects and relational databases. It provides a standardized way to intract with databases using object-oriented approaches, allowing developers to focus more on business logic rather than low-level SQL queries and database operations.
+
+The Java Persistence API (JPA) is specification of java. It is used to persist data between Java object and Relational Databases.JPA acts as a bridge between Object-oriented domain model and relational database system.
+
+As JPA is just a specification,it doesn't perform any operation by itself.It requires an implementation.So, ORM(Object Relational Mapping) tools like Hibernate implements JPA specification for data persistence.
+
+ORM stands for Object Relational Mapping. It's a programming technique that allows developers to efficiently work with relational databases using an object oriented paradigm.
+
+TopLink
+iBatis
+
+.NET+>Entity Framework
+Python=>SQLAlchemy
+
+---------------------------------------------------------------------------------------------------------------
+
+#configure datasource mysql
+spring.datasource.url=jdbc:mysql://localhost:3306/rps
+spring.datasource.username=root
+spring.datasource.password=root
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+spring.jpa.hibernate.ddl-auto=update
+
+
+-----------------------------------------------------------------------
+
+JpaRepository is a part of the Spring Data JPA framework,which simplifies the implementation of data access layers in Java Application.Specifically JPARepository is an interface provided by spring data jpa that extends the CrudRepository interface.
+
+You can perform CRUD operations by using JPA Repository.
+
+Overall ,JPARepository simplifies and abstracts away much of the boilerplates code required for data access layers,making it easier and faster to work with databases in Java Spring application.
+
+------------------------------------------------------------------------------------
+@Repository
+
+is an annotation provided by the Spring Framework in java.It is used to indicate that a particular class is repository,typically a Data Access Object(DAO) that perform database operations such as quering,saving,updating or deleting data.
+
+-------------------------------------------------------------------------------------
+Why Service?
+
+Assignment:
+
+Create a product management system which will perform Crud operation from database.
+1.Create a model class with properties:
+    productId
+    productName
+    productPrice
+    productQty
+    
+    Product Id will be primary key and auto generated
+    productName,productPrice and productQty should not null
+    
+2.Create a ProductRepository
+    Have methods to search product by name and price
+    
+3.Create Service class which will perform
+        productDetails
+        productDetailById
+        productDetailByName
+        productDetailByPrice
+        productAdd
+        productUpdate
+        productDelete
+4.Create a controller class which will have correct mapping methods.
+
+https://collabedit.com/vbm2f
+
+https://github.com/rakeshsri74/citibank_day3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
